@@ -1,0 +1,39 @@
+ $(window).scroll(function () {
+                    var scrolled = $(document).scrollTop();
+                    var winh = $(window).height();
+                    $(".opa").each(function () {
+                      var opRange = $(this).parent().height() / 5;
+                      $(this).css({
+                        "opacity": ($(this).data("seq") * opRange - scrolled) / opRange
+                      });
+                    });
+
+
+                    $(".maploc").each(function () {
+                      var thispos = $(this).offset().top;
+                      var thish = $(this).height();
+                      if (scrolled >= thispos && scrolled < thispos + thish) {
+                        $("#bg-img").css({
+                          "background-position": $(this).data("bgpos")
+                        });
+                      }
+                    });
+                  });
+
+                  $(document).ready(function () {
+                    var max_scroll = $("#outer").parent().height() - $(window).height();
+                    var win_w = $(window).width();
+                    var out_pos = $("#outer").parent().offset().top;
+
+                    $(window).scroll(function () {
+                      var scrolled = $(window).scrollTop();
+                      console.log(scrolled + "/" + out_pos);
+
+                      if (scrolled > out_pos && scrolled < out_pos + max_scroll) {
+                        var new_width = (win_w * (scrolled - out_pos)) / max_scroll;
+                        $("#statusbar").css({
+                          width: new_width
+                        });
+                      }
+                    });
+                  });

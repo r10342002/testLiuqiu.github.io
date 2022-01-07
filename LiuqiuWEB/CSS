@@ -1,0 +1,29 @@
+.earth-img {
+      position: fixed;
+      height: 100%;
+      object-fit: cover;
+      /*              object-position: right;*/
+      opacity: 1;
+    }
+
+    #bg-img {
+      background-image: url(images/Linpen2019_lg.jpg);
+      background-position: 0 0;
+      animation: move 1s linear forwards;
+    }
+    #outer {
+        background-image: url(https://lh3.googleusercontent.com/lvXOJFwqB7-g_Dntzy7Gb7vUtLXdAxMEqTW5GmnfQcr6KbiMTIDn_M6pEloGSMR9c9nuZ3kSntTHKez9CLS6HSEfbyKr7NRn53s_wW5b6nVrq_rT56lnCYku-aQKJlLHZVAdkVZ68ys=w2400);
+        background-size: cover;
+        background-repeat: none;
+        background-attachment: fixed;
+      }
+  
+      #statusbar {
+        position: relative;
+        left: 0;
+        width: 0;
+        background-image: url(https://lh3.googleusercontent.com/hv7LexsxMok0MVDQlP_93PHJj-LT7kqsJKzLrYSL0V35o3bDJu6Jf0wh_pGyp6YGIQIxEI9XEfUM86S5VEWSj-NKQHAgp2nF6WfxBnhkuZmbUJ-XNoogDT4ac2rT9-AqNPfCZhvMyGM=w2400);
+        background-size: cover;
+        background-repeat: none;
+        background-attachment: fixed;
+      }
